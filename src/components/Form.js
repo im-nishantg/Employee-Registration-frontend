@@ -20,12 +20,13 @@ const Form = () => {
         Axios.post('https://mern-crud-n.herokuapp.com/create', newEntry)
             .then(function (response) {
                 console.log(response);
+                window.location.reload();
+
             })
             .catch(function (error) {
                 console.log(error);
             });
 
-        window.location.reload();
     }
 
     return (
